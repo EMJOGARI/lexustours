@@ -1,0 +1,749 @@
+$texto: #000000;/* Negro */
+$c1: #fff;
+$c2: #fddc03; // #efc20f
+$c3: rgba(0, 156, 252, 0.86);
+$star: #e7c61b;
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $texto;
+}
+hr {
+    border-top: 1px solid rgb(36, 170, 252);
+    margin-bottom: 2rem;
+} 
+.btn-primary{
+    width: 100%;
+    background-color: rgba(0, 156, 252, 0.86);
+    border-color: rgba(0, 156, 252, 0.86);
+}
+.bienvenido {
+    color: $c1;
+    //background-attachment: fixed !important;
+    //background: url("../../assets/img/fin.png") no-repeat center top;   
+    //background-size: 100% 100%;
+    //height: 100vh;
+    /** hacer q todos los elementos esten uno debajo del otro **/
+    display: flex;
+    flex-direction: column;
+    //margin-top: 4.8rem;
+}
+.encabezado {
+    background: $c3; //#d0d0d066;
+    //color: $texto;
+    padding: .4rem 0;
+    transition: all 1s ease;
+}
+.encabezado .dropdown-menu {
+    background: $c3;//rgba(127, 128, 130, 0.34);
+    margin-top:1.5rem; 
+    //border: 2px solid rgb(181, 175, 175); 
+}
+
+.encabezado .dropdown-menu .dropdown-item {
+    background: #d0d0d066;
+    width: 95%; 
+   
+}
+
+.encabezado.fondo-menu {
+    background: rgba(0, 156, 252, 0.86);    
+    padding: 0.6rem 0;
+}
+.encabezado .container-fluid {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.encabezado .logo img {
+    width: 250px;
+    height: auto;
+}
+ //////////////////////////
+//** TEXTO ENCABEZADO **//
+//////////////////////////
+.texto-encabezado {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+.texto-encabezado .display-4 {
+    margin-top: 4rem;   
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.25);
+}
+.texto-encabezado .subtitle {    
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+}
+//** Fondo menu **//
+.boton-menu {
+    border: 0;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 .5rem;
+    background: transparent;
+    color: $c2;
+}
+.boton-menu:focus {
+    outline: 0;
+}
+.boton-menu {
+    margin-left: auto;
+}
+////////////////////
+//** BOTON MENU **//
+////////////////////
+.encabezado.fondo-menu #menu-principal ul a{
+    color: $c2;
+}
+#menu-principal {
+    flex: 1 1 100%;
+}
+#menu-principal ul {
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0 0 0;
+}
+#menu-principal ul a {
+    display: block;
+    padding: .5rem;
+    text-align: center;
+    color: $texto;
+    text-transform: uppercase;
+    border-top: 1px solid $c2;
+    text-decoration: none;
+    font-weight: bold;
+}
+#menu-principal ul a:hover,
+#menu-principal ul li.active a {
+    color: $c2;
+}
+//////////////////////////
+//** GALERIA **//
+//////////////////////////
+.galeria .container-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.galeria .carousel-caption {
+   background: rgba(51, 49, 49, 0.47843137254901963);
+   border-radius: 50px;
+}
+
+
+.galeria .carousel-item img{
+    height: 80vh;
+}
+.galeria .carousel-inner h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $c1;
+}
+.galeria .carousel-inner a {
+    position: absolute;
+    top: 45%;
+}
+.galeria .carousel-inner .carousel-control-prev {
+    left: 0;
+    padding-left: 1rem;
+}
+.galeria .carousel-inner .carousel-control-next {
+    right: 0;
+    padding-right: 1rem;
+}
+.galeria .carousel-inner .carousel-control-prev,
+.galeria .carousel-inner .carousel-control-next{
+    opacity: 0;
+    font-size: 2.5rem;
+    color: $c1;
+    transition: all .5s ease;
+    height: 10px;
+    animation: flecha-animada 2s ease-in-out infinite;
+}
+@keyframes flecha-animada {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+.galeria .carousel-inner .carousel-control-prev:hover,
+.galeria .carousel-inner .carousel-control-next:hover {
+    color: $c2;
+}
+.galeria .carousel-inner:hover .carousel-control-prev {
+    opacity: 0.9;
+    left: 1rem;
+}
+.galeria .carousel-inner:hover .carousel-control-next {
+    opacity: 0.9;
+    right: 1rem;
+}
+/////////////////
+//* HOTELERIA *//
+/////////////////
+.hoteles {
+    background: url("../../assets/img/h1.jpg") no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed !important;
+    color: #fff;
+}
+.hoteles a {
+    text-decoration: none;
+}
+.hoteles a h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    color: $c1;
+}
+.hoteles .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hoteles .owl-carousel a img {
+    width: 100%;
+    height: 220px;
+        
+}
+.hoteles .owl-carousel a .svg-inline--fa {
+   color: $star;
+}
+.hoteles .owl-carousel .owl-nav {
+    display: flex;
+    justify-content: center;
+    margin: .3rem 0;
+}
+.hoteles .owl-carousel .owl-nav .owl-prev,
+.hoteles .owl-carousel .owl-nav .owl-next {
+    font-size: 3rem;
+    margin: 0 .5rem;
+    color: $c1;
+    display: none;
+    transition: all .5s ease;
+}
+.hoteles .owl-carousel .owl-nav .owl-prev:hover,
+.hoteles .owl-carousel .owl-nav .owl-next:hover {
+    color: $c2;
+     display: block;
+}
+
+////////////////////////////
+//** SECCION PIE DE PAG **//
+////////////////////////////
+.pie-de-pagina {
+    background-color: #d0d0d066;//#cccccc;
+    color: $texto;
+    text-align: center;
+    font-size: .9rem;
+}
+.pie-de-pagina h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    color: $texto;
+    margin: 1.5rem 0 1rem 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.31);
+    box-shadow: 0 -1px rgba(255, 255, 255, 0.15) inset;
+    padding-bottom: 1rem;
+}
+.pie-de-pagina .container {
+    margin-bottom: .1rem;
+}
+/* Imagen Palma */
+.pie-de-pagina img {
+    width: 100%;
+    padding-top: 1.5rem;
+}
+/* Informacion de Contacto */
+.pie-de-pagina .informacion-de-contacto {
+    padding: 0;
+    text-align: initial;
+}
+.pie-de-pagina .informacion-de-contacto li {
+    list-style: none;
+    margin: .6rem 0;
+    padding: 0;
+}
+.pie-de-pagina .informacion-de-contacto li .fa {
+    margin: 0 .3rem 0 0;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $texto;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+.pie-de-pagina .informacion-de-contacto li:hover .fa {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+}
+.pie-de-pagina .informacion-de-contacto li a {
+    color: inherit;
+}
+/* Redes Sociales */
+.pie-de-pagina .redes-sociales {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.pie-de-pagina .redes-sociales a {
+    color: $texto;
+    font-size: 2rem;
+    margin: 0 .5rem;
+    opacity: .7;
+    transition: all .5s ease;
+}
+.pie-de-pagina .redes-sociales a:hover {
+    opacity: 1;
+}
+/* Creditos */
+.pie-de-pagina .creditos {
+    background: #111111;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+//////////////////////
+//** PAG CONTACTO **//
+//////////////////////
+
+.items-contacto{ 
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.items-contacto .fa,
+.items-contacto .fas {
+    font-size: 1.5rem;
+    margin: 0 .3rem 0 0;
+    justify-content: center;
+    align-items: center;
+    color: $c3;
+    opacity: .5;
+}
+
+.items-contacto .items-siguenos a .fab {
+    font-size: 4rem;
+    margin-left: 3rem;
+    color: $c3;    
+    text-align: center;
+}
+
+//////////////
+//** BLOG **//
+//////////////
+.interna .blog {
+    background: url("../../assets/img/blogs/b1.jpg") no-repeat center top;
+    color: $c1;
+    background-size: cover;    
+    height: 40vh;    
+}
+
+.blog-jum .jumbotron {    
+    background-image: url("../../assets/img/blogs/lr1.jpg");
+    background-size: 100% 100%;     
+}
+.blog-card .card-body {
+    width: 400px;   
+}
+
+.blog-card .card {
+   display: flex;      
+}
+.blog-card .card img{
+    width: 10rem;
+    height: 10rem;
+}
+/////////////////
+//** DESTINO **//
+/////////////////
+.interna .card-img-overlay:hover{  
+    background: rgba(255, 255, 255, 0.3);
+}
+.card-img-overlay{
+    padding:0;
+}
+.interna .sombra{
+    background: rgba(0, 0, 0, 0.60);
+    padding: 10px;       
+}
+.interna .sombra .card-text{    
+    color:#fff;
+    font-weight: bold;
+}
+
+///////////////////////////
+//** SERVICIOS HOTELES **//
+///////////////////////////
+.interna .servicios-hotel{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.interna .servicios-hotel li{
+    margin-right: 20px;
+}
+.interna .servicios-hotel li .svg-inline--fa{
+    font-size: 1.5rem;
+}
+
+/////////////////////////
+//** GALERIA HOTELES **//
+/////////////////////////
+.galeria-hotel .container-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.galeria-hotel .carousel-item img{
+    height: 60vh;
+}
+.galeria-hotel .carousel-inner h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $c1;
+}
+.galeria-hotel .carousel-inner a {
+    position: absolute;
+    top: 45%;
+}
+.galeria-hotel .carousel-inner .carousel-control-prev {
+    left: 0;
+    padding-left: 1rem;
+}
+.galeria-hotel .carousel-inner .carousel-control-next {
+    right: 0;
+    padding-right: 1rem;
+}
+.galeria-hotel .carousel-inner .carousel-control-prev,
+.galeria-hotel .carousel-inner .carousel-control-next{
+    opacity: 0.1;
+    font-size: 2.5rem;
+    color: $c1;
+    transition: all .5s ease;
+    height: 10px;
+    animation: flecha-animada 2s ease-in-out infinite;
+}
+.galeria-hotel .carousel-inner .carousel-control-prev:hover,
+.galeria-hotel .carousel-inner .carousel-control-next:hover {
+    color: $c2;
+}
+.galeria-hotel .carousel-inner:hover .carousel-control-prev {   
+    opacity: 0.9;
+    left: 1rem;
+}
+.galeria-hotel .carousel-inner:hover .carousel-control-next {
+    opacity: 0.9;
+    right: 1rem;
+}
+
+//////////////////////////
+//** PESTAÑAS HOTELES **//
+//////////////////////////
+.interna .hot {
+    background: url("../../assets/img/hotels/playa_el_agua.jpg") no-repeat center top;
+    color: $c1;
+    background-size:100% 100%;    
+    height: 50vh;    
+}
+.interna .hot .texto-encabezado h3{
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.25);
+}
+.interna .hot .isla{
+    font-weight: bold;
+    //color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.25);
+}
+
+#tama{
+    color: $c1;
+    background-size:100% 100%;    
+    height: 50vh; 
+}
+
+#mision{
+    background-attachment: fixed !important;
+    background: url("../../assets/img/quienesomos.png") no-repeat center top;
+    height: 40vh;
+}
+
+#text-right{
+    padding: 4rem;
+    float: right;
+    text-align: center;
+    color: #fff;
+}
+
+#text-left{
+    padding: 4rem;    
+    text-align: center;
+    color: #fff;
+}
+
+.interna .nosotros{
+    background: url("../../assets/img/quienesomos.png") no-repeat center top;    
+}
+
+.interna .contacto{
+    background: url("../../assets/img/contacto.png") no-repeat center top;    
+}
+
+.interna .politica{
+    background: url("../../assets/img/privacidad.png") no-repeat center top;    
+}
+
+.interna .sunsol_punta_blanca{
+    background: url("../../assets/img/hotels/coche/sunsol_punta_blanca.jpg") no-repeat center top;
+}
+
+.interna .cp{
+    background: url("../../assets/img/hotels/coche/cocheparadise/cp.jpg") no-repeat center top;
+}
+
+.interna .hec {
+    background: url("../../assets/img/hotels/margarita/hesperiaclubeden/hec01.jpg") no-repeat center top;
+}
+
+.interna .Portofino {
+    background: url("../../assets/img/hotels/margarita/portofino/p01.jpg") no-repeat center top;
+}
+
+.interna .sic {
+    background: url("../../assets/img/hotels/margarita/sunsolislacaribe/sic.jpg") no-repeat center top;
+}
+
+.interna .him {
+    background: url("../../assets/img/hotels/margarita/hesperiaislamargarita/him.jpg") no-repeat center top;
+}
+
+.interna .dunes {
+    background: url("../../assets/img/hotels/margarita/dunes/dunes.jpeg") no-repeat center top;
+}
+
+.interna .hpa {
+    background: url("../../assets/img/hotels/margarita/hesperiaplayaelagua/hpa01.jpg") no-repeat center top;
+}
+
+.interna .ldpb {
+    background: url("../../assets/img/hotels/margarita/ldpalmbeach/ldpb.jpeg") no-repeat center top;
+}
+
+.interna .ldpbp {
+    background: url("../../assets/img/hotels/margarita/ldpalmbeachplus/ldpbp.jpg") no-repeat center top;
+}
+
+.interna .ldspp {
+    background: url("../../assets/img/hotels/margarita/ldpuntaplaya/ldspp.jpg") no-repeat center top;
+}
+
+.interna .lf {
+    background: url("../../assets/img/hotels/margarita/leflamboyant/lf.jpg") no-repeat center top;
+}
+
+.interna .ikin {
+    background: url("../../assets/img/hotels/margarita/ikin/ikin01.jpg") no-repeat center top;      
+}
+
+.interna .wyndham {
+    background: url("../../assets/img/hotels/margarita/wyndham/wyn.jpg") no-repeat center top;      
+}
+
+.interna .ldh {
+    background: url("../../assets/img/hotels/margarita/ldh2otel/ldh.jpg") no-repeat center top;      
+}
+
+.interna .lidotel {
+    background: url("../../assets/img/hotels/margarita/lidotel/l05.jpg") no-repeat center top;      
+}
+
+.interna .lad {
+    background: url("../../assets/img/hotels/margarita/lidotelaguadorada/lad.jpg") no-repeat center top;      
+}
+
+.interna .tibisay {
+    background: url("../../assets/img/hotels/margarita/tibisay/tib01.jpg") no-repeat center top;      
+}
+.interna .venetur{
+    background: url("../../assets/img/hotels/margarita/venetur/ven01.jpg") no-repeat center top;      
+}
+
+.interna .kokobay {
+    background: url("../../assets/img/hotels/margarita/kokobay/kok.jpg") no-repeat center top;      
+}
+
+
+////////////////////////////////
+//** SECCION MEJOR ELECCION **//
+////////////////////////////////
+.tu-mejor-eleccion h2 span {
+    color: $c2;
+}
+.tu-mejor-eleccion ul,
+.tu-mejor-eleccion li {
+    list-style: none;
+}
+.tu-mejor-eleccion ul li .fas,
+.tu-mejor-eleccion ul li .far,
+.tu-mejor-eleccion ul li .fab {
+    list-style: none;
+}
+.tu-mejor-eleccion ul li .fas,
+.tu-mejor-eleccion ul li .far,
+.tu-mejor-eleccion ul li .fab {
+    font-size: 1.7rem;
+    background: $c3;
+    border-radius: 50%;
+    width: 3.7rem;
+    height: 3.7rem;
+    line-height: 3.7rem;
+    color: $c2;
+    margin-top: .5rem;
+}
+.tu-mejor-eleccion ul li .contenedor-eleccion h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: .8rem;
+    color: $texto;
+}
+.tu-mejor-eleccion ul li {
+    min-height: 9rem;
+}
+
+/////////////////////
+//** EXCURSIONES **//
+/////////////////////
+.safari .card {
+    width: 100%; 
+    height: 100%;
+}
+
+.safari .card img{
+    width: 100%; 
+    height: 100%;
+}
+
+
+////////////////////////
+//** MEDIAS QUERIES **//
+////////////////////////
+@media(min-width:992px) {
+    .encabezado .logo img {
+        width: 250px;
+        height: auto;
+    }
+    ///////////////////////////////////
+    //** SECCION TU MEJOR ELECCION **//
+    ///////////////////////////////////
+    .tu-mejor-eleccion ul li {
+        display: flex;
+        min-height: 4rem;
+    }
+    .tu-mejor-eleccion ul li .fas,
+    .tu-mejor-eleccion ul li .far,
+    .tu-mejor-eleccion ul li .fab {
+        text-align: center;
+        flex: 0 1 auto;
+        margin-right: 1rem;
+        margin-top: 0;
+        transition: all 1s ease;
+    }
+   /* .tu-mejor-eleccion ul li:hover .fas,
+    .tu-mejor-eleccion ul li:hover .far {
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+        background: $c2;
+        color: $c3;
+    }*/
+    .contenedor-eleccion {
+        flex: 1 0 0px;
+    }
+    .tu-mejor-eleccion ul li .contenedor-eleccion h4 {
+        font-size: 1.2rem;
+        margin-top: 1.2rem;
+    }
+    //:first-child
+    .tu-mejor-eleccion ul:last-child .fas, 
+    .tu-mejor-eleccion ul:last-child .far,
+    .tu-mejor-eleccion ul:last-child .fab {
+        order: 1;
+        margin-right: 0;
+        margin-left: 1rem;
+    }
+
+    .tu-mejor-eleccion .condicion ul:last-child .fas, 
+    .tu-mejor-eleccion .condicion ul:last-child .far {
+        order: 0;
+        margin-right: 0;
+        margin-left: 1rem;
+        margin-top: .5rem
+    }
+    .tu-mejor-eleccion ul li p {
+        font-size: .85rem;
+    }
+    .tu-mejor-eleccion img {
+        width: 100%;
+        margin-top: 6rem;
+    }
+    
+}
+
+
+@media(min-width:768px) {
+
+    ////////////////////////
+    //** MENU PRINCIPAL **//
+    ////////////////////////
+    .encabezado .dropdown-menu .dropdown-item {
+        border: 0; 
+    }   
+    #menu-principal {
+        height: auto !important;
+        display: block;
+        flex: 0 1 auto;
+        margin-left: auto;       
+    }
+    #menu-principal ul {
+        display: flex;
+        margin: 0;
+    }
+    #menu-principal ul li a {
+        padding: .5rem;
+        //text-transform: uppercase;       
+        margin: 0 .2rem;
+        border-top: 0;
+        border: 4px solid transparent;
+        transition: all .5s ease;       
+    }
+    #menu-principal ul li.active a,
+    #menu-principal ul li a:hover {
+        color: $c1;
+        border-bottom: 4px solid $c1;
+    }
+}
